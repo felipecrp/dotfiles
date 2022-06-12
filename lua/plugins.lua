@@ -5,8 +5,16 @@ return require('packer').startup(function()
 	use 'junegunn/fzf.vim'
 	use 'scrooloose/nerdtree'
 	use 'bling/vim-airline'
-	use 'easymotion/vim-easymotion'
 	use 'ericbn/vim-solarized'
+
+	-- navigation
+	use {
+		'phaazon/hop.nvim',
+		config = function()
+			require'hop'.setup()
+		end
+	}
+	-- use 'easymotion/vim-easymotion'
 
 	-- language server
 	use 'neovim/nvim-lspconfig'

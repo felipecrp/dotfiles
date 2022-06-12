@@ -2,6 +2,7 @@ set number
 set relativenumber
 
 lua require('plugins')
+lua require('keymaps')
 " lua require('cmp')
 
 "set backgroud=dark
