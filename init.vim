@@ -1,5 +1,15 @@
+" change leader from \ to ,
+let mapleader = ","
+
+" line number
 set number
 set relativenumber
+
+" tabs to space
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
 
 lua require('plugins')
 lua require('keymaps')
