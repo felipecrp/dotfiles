@@ -16,6 +16,9 @@ return require('packer').startup(function()
 	}
 	-- use 'easymotion/vim-easymotion'
 
+    -- git
+    use 'tpope/vim-fugitive'
+
 	-- language server
 	use 'neovim/nvim-lspconfig'
 	use 'hrsh7th/cmp-nvim-lsp'
