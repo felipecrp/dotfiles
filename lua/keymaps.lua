@@ -6,6 +6,10 @@ require('legendary').bind_keymaps({
     { '/l', ':HopLine<CR>' },
     { '//', '/' },
 
+    -- Git
+    { '<leader>g', ':Git' },
+    
+
     -- Files and Menus
     { '<leader>p', ':Files<CR>' },
     { '<leader>f', ':Files<CR>' },
