@@ -6,8 +6,9 @@ require('legendary').bind_keymaps({
     { '/l', ':HopLine<CR>' },
     { '//', '/' },
 
-    -- Files
+    -- Files and Menus
     { '<leader>p', ':Files<CR>' },
     { '<leader>f', ':Files<CR>' },
     { '<leader>b', ':Buffers<CR>' },
+    { '<leader>c', ':Commands<CR>' },
 })
