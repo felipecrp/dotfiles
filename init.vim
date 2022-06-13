@@ -1,6 +1,9 @@
 " change leader from \ to ,
 let mapleader = ","
 
+" clipboard
+set clipboard+=unnamedplus
+
 " line number
 set number
 set relativenumber

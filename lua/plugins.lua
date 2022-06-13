@@ -30,6 +30,14 @@ return require('packer').startup(function()
 	use 'hrsh7th/cmp-cmdline'
 	use 'hrsh7th/nvim-cmp'
 
+    -- language markdown
+    use 'godlygeek/tabular'
+    use 'preservim/vim-markdown'
+    use({
+        "iamcco/markdown-preview.nvim",
+        run = function() vim.fn["mkdp#util#install"]() end,
+    })
+
     -- development
     use {
        'nvim-treesitter/nvim-treesitter'

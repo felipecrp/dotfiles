@@ -1,17 +1,23 @@
 require('legendary').bind_keymaps({
-    -- Search 
+    -- window navigation
+    { '<C-h>', '<C-w>h' },
+    { '<C-j>', '<C-w>j' },
+    { '<C-k>', '<C-w>k' },
+    { '<C-l>', '<C-w>l' },
+    
+    -- search 
     { '/', '<Nop>' },
-    { '/c', ':HopChar1<CR>' },
-    { '/w', ':HopWord<CR>' },
-    { '/l', ':HopLine<CR>' },
+    { '/c', ':HopChar1MW<CR>' },
+    { '/w', ':HopWordMW<CR>' },
+    { '/l', ':HopLineMW<CR>' },
     { '//', '/' },
 
-    -- Git
+    -- git
     { '<leader>g', ':Git ' },
     { '<leader>gg', ':Git<CR>' },
     
 
-    -- Files and Menus
+    -- files and menus
     { '<leader>p', ':Files<CR>' },
     { '<leader>f', ':Files<CR>' },
     { '<leader>b', ':Buffers<CR>' },
