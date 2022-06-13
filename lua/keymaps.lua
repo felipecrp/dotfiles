@@ -8,6 +8,7 @@ require('legendary').bind_keymaps({
 
     -- Git
     { '<leader>g', ':Git ' },
+    { '<leader>gg', ':Git<CR>' },
     
 
     -- Files and Menus
@@ -15,4 +16,7 @@ require('legendary').bind_keymaps({
     { '<leader>f', ':Files<CR>' },
     { '<leader>b', ':Buffers<CR>' },
     { '<leader>c', ':Commands<CR>' },
+    { '<leader>a', ':Ag<CR>' },
+    { '<leader>t', ':Tags<CR>' },
+    { '<leader>h', ':History<CR>' },
 })

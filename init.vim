@@ -17,8 +17,8 @@ lua require('plugins')
 lua require('keymaps')
 " lua require('cmp')
 
-"set backgroud=dark
-"colorscheme solarized
+set background=dark
+colorscheme solarized
 
 lua <<EOF
   -- Setup nvim-cmp.

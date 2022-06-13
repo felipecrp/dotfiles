@@ -120,6 +120,11 @@ _G.packer_plugins = {
     path = "/home/felipecrp/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
+  ["nvim-treesitter"] = {
+    loaded = true,
+    path = "/home/felipecrp/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/felipecrp/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -130,10 +135,20 @@ _G.packer_plugins = {
     path = "/home/felipecrp/.local/share/nvim/site/pack/packer/start/vim-airline",
     url = "https://github.com/bling/vim-airline"
   },
+  ["vim-fugitive"] = {
+    loaded = true,
+    path = "/home/felipecrp/.local/share/nvim/site/pack/packer/start/vim-fugitive",
+    url = "https://github.com/tpope/vim-fugitive"
+  },
   ["vim-solarized"] = {
     loaded = true,
     path = "/home/felipecrp/.local/share/nvim/site/pack/packer/start/vim-solarized",
     url = "https://github.com/ericbn/vim-solarized"
+  },
+  ["vim-test"] = {
+    loaded = true,
+    path = "/home/felipecrp/.local/share/nvim/site/pack/packer/start/vim-test",
+    url = "https://github.com/vim-test/vim-test"
   }
 }
 

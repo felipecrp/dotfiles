@@ -2,9 +2,12 @@
 return require('packer').startup(function()
 	use 'wbthomason/packer.nvim'
 
-	use 'junegunn/fzf.vim'
+	-- search
+    use 'junegunn/fzf.vim'
+    
+    -- user interface
 	use 'scrooloose/nerdtree'
-	use 'bling/vim-airline'
+    use 'bling/vim-airline'
 	use 'ericbn/vim-solarized'
 
 	-- navigation
@@ -27,6 +30,25 @@ return require('packer').startup(function()
 	use 'hrsh7th/cmp-cmdline'
 	use 'hrsh7th/nvim-cmp'
 
+    -- development
+    use {
+       'nvim-treesitter/nvim-treesitter'
+    }
+
+    -- development tests
+    use 'vim-test/vim-test'
+    --use {
+    --    "klen/nvim-test",
+    --    config = function()
+    --        require('nvim-test').setup()
+    --        require('nvim-test.runners.pytest'):setup {
+    --            command = "pytest"                                       -- a command to run the test runner
+    --        }
+    --    end
+    --}
+
 	-- keybinds
 	use 'mrjones2014/legendary.nvim'
 end)
+
+
