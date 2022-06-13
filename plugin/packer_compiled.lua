@@ -149,6 +149,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/felipecrp/.local/share/nvim/site/pack/packer/start/vim-test",
     url = "https://github.com/vim-test/vim-test"
+  },
+  vimspector = {
+    loaded = true,
+    path = "/home/felipecrp/.local/share/nvim/site/pack/packer/start/vimspector",
+    url = "https://github.com/puremourning/vimspector"
   }
 }
 

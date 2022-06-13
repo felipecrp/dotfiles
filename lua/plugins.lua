@@ -35,6 +35,9 @@ return require('packer').startup(function()
        'nvim-treesitter/nvim-treesitter'
     }
 
+    -- development debug
+    use 'puremourning/vimspector'
+
     -- development tests
     use 'vim-test/vim-test'
     --use {
