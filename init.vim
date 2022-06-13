@@ -10,6 +10,8 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+" scroll
+set scrolloff=8
 
 lua require('plugins')
 lua require('keymaps')
