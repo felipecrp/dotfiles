@@ -7,7 +7,7 @@ require('legendary').bind_keymaps({
     { '//', '/' },
 
     -- Git
-    { '<leader>g', ':Git' },
+    { '<leader>g', ':Git ' },
     
 
     -- Files and Menus
