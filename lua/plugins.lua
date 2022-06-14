@@ -23,12 +23,16 @@ return require('packer').startup(function()
     use 'tpope/vim-fugitive'
 
 	-- language server
-	use 'neovim/nvim-lspconfig'
-	use 'hrsh7th/cmp-nvim-lsp'
-	use 'hrsh7th/cmp-buffer'
-	use 'hrsh7th/cmp-path'
-	use 'hrsh7th/cmp-cmdline'
-	use 'hrsh7th/nvim-cmp'
+    use {
+        'neoclide/coc.nvim', 
+        branch = 'release'
+    }
+    -- use 'neovim/nvim-lspconfig'
+	-- use 'hrsh7th/cmp-nvim-lsp'
+	-- use 'hrsh7th/cmp-buffer'
+	-- use 'hrsh7th/cmp-path'
+	-- use 'hrsh7th/cmp-cmdline'
+	-- use 'hrsh7th/nvim-cmp'
 
     -- language markdown
     use 'godlygeek/tabular'

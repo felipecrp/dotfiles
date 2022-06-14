@@ -4,7 +4,7 @@ require('legendary').bind_keymaps({
     { '<C-j>', '<C-w>j' },
     { '<C-k>', '<C-w>k' },
     { '<C-l>', '<C-w>l' },
-    
+
     -- search 
     { '/', '<Nop>' },
     { '/c', ':HopChar1MW<CR>' },
@@ -15,7 +15,6 @@ require('legendary').bind_keymaps({
     -- git
     { '<leader>g', ':Git ' },
     { '<leader>gg', ':Git<CR>' },
-    
 
     -- files and menus
     { '<leader>p', ':Files<CR>' },
@@ -25,4 +24,10 @@ require('legendary').bind_keymaps({
     { '<leader>a', ':Ag<CR>' },
     { '<leader>t', ':Tags<CR>' },
     { '<leader>h', ':History<CR>' },
+
+    -- coc
+    -- { '<Tab>', 'coc#refresh()', opts = { expr = true }, mode = { 'i' } },
+    -- { '<Tab>', 'pumvisible() ? "<C-n>" : "<Tab>"', opts = { expr = true }, mode = { 'i' } }
+    { '<Tab>', 'pumvisible() ? "<C-n>" : "<Tab>"', opts = { expr = true }, mode = { 'i' } },
+    { '<S-Tab>', 'pumvisible() ? "<C-p>" : "<S-Tab>"', opts = { expr = true }, mode = { 'i' } }
 })
