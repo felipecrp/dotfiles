@@ -1,0 +1,8 @@
+- default:
+    link:
+      relink: true
+  
+- link:
+    ~/.tmux.conf: tmux/tmux.conf
+    ~/.config/nvim: nvim
+
