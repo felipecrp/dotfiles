@@ -70,7 +70,14 @@ return require('packer').startup(function()
     --}
 
 	-- keybinds
-	use 'mrjones2014/legendary.nvim'
+	use { 
+        'mrjones2014/legendary.nvim',
+        config = function()
+            require('legendary').setup({
+                include_builtin = true
+            })
+        end
+    }
 end)
 
 
