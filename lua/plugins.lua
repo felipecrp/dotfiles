@@ -3,12 +3,17 @@ return require('packer').startup(function()
 	use 'wbthomason/packer.nvim'
 
 	-- search
-    use 'junegunn/fzf.vim'
-    
+    -- use 'junegunn/fzf.vim'
+    use {
+      'nvim-telescope/telescope.nvim',
+      requires = { {'nvim-lua/plenary.nvim'} }
+    }
+
     -- user interface
 	use 'scrooloose/nerdtree'
     use 'bling/vim-airline'
 	use 'ericbn/vim-solarized'
+    use 'stevearc/dressing.nvim'
 
 	-- navigation
 	use {
@@ -17,7 +22,9 @@ return require('packer').startup(function()
 			require'hop'.setup()
 		end
 	}
-	-- use 'easymotion/vim-easymotion'
+
+    -- terminal
+    use 'aserowy/tmux.nvim' 
 
     -- git
     use 'tpope/vim-fugitive'

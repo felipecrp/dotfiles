@@ -16,18 +16,24 @@ require('legendary').bind_keymaps({
     { '<leader>g', ':Git ' },
     { '<leader>gg', ':Git<CR>' },
 
-    -- files and menus
-    { '<leader>p', ':Files<CR>' },
-    { '<leader>f', ':Files<CR>' },
-    { '<leader>b', ':Buffers<CR>' },
-    { '<leader>c', ':Commands<CR>' },
-    { '<leader>a', ':Ag<CR>' },
-    { '<leader>t', ':Tags<CR>' },
-    { '<leader>h', ':History<CR>' },
+    -- files and menusini
+    { '<leader>p', ':Telescope find_files<CR>' },
+    { '<leader>f', ':Telescope find_files<CR>' },
+    { '<leader>b', ':Telescope buffers<CR>' },
+    { '<leader>c', ':Telescope commands<CR>' },
+    { '<leader>a', ':Telescope live_grep<CR>' },
+    { '<leader>t', ':Telescope tags<CR>' },
+    { '<leader>h', ':Telescope search_history<CR>' },
+    -- { '<leader>p', ':Files<CR>' },
+    -- { '<leader>f', ':Files<CR>' },
+    -- { '<leader>b', ':Buffers<CR>' },
+    -- { '<leader>c', ':Commands<CR>' },
+    -- { '<leader>a', ':Ag<CR>' },
+    -- { '<leader>t', ':Tags<CR>' },
+    -- { '<leader>h', ':History<CR>' },
 
     -- coc
-    -- { '<Tab>', 'coc#refresh()', opts = { expr = true }, mode = { 'i' } },
-    -- { '<Tab>', 'pumvisible() ? "<C-n>" : "<Tab>"', opts = { expr = true }, mode = { 'i' } }
-    { '<Tab>', 'pumvisible() ? "<C-n>" : "<Tab>"', opts = { expr = true }, mode = { 'i' } },
+    { '<Tab>', 'pumvisible() ? "<C-n>" : CheckBackspace() ? "<Tab>" : coc#refresh()', opts = { expr = true }, mode = { 'i' } },
     { '<S-Tab>', 'pumvisible() ? "<C-p>" : "<S-Tab>"', opts = { expr = true }, mode = { 'i' } }
 })
+
