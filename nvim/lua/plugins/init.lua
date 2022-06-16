@@ -1,10 +1,3 @@
--- Auto load changes in plugins.lua
-vim.cmd([[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerCompile
-  augroup end
-]])
 
 return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
@@ -46,29 +39,7 @@ return require('packer').startup(function(use)
     use {
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate',
-        config = function()
-            require('nvim-treesitter.configs').setup {
-                highlight = {
-                    enable = true,
-                    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-                    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-                    -- Using this option may slow down your editor, and you may see some duplicate highlights.
-                    -- Instead of true it can also be a list of languages
-                    additional_vim_regex_highlighting = false,
-                },
-                incremental_selection = {
-                    enable = true
-                },
-                indent = {
-                    enable = true
-                }
-            }
-
-            vim.cmd([[
-                set foldmethod=expr
-                set foldexpr=nvim_treesitter#foldexpr()
-            ]])
-        end
+        config = function() require('plugins.treesitter') end
     }
 
     -- comments
@@ -78,6 +49,19 @@ return require('packer').startup(function(use)
             require('nvim_comment').setup()
         end
     }
+
+    -- language server
+    use {
+        'neovim/nvim-lspconfig',
+        config = function() require('lsp') end
+    }
+    use {
+        "williamboman/nvim-lsp-installer",
+        config = function() require('nvim-lsp-installer').setup() end
+    }
+
+    --
+    --
     -- language server
     --use {
     --    'neoclide/coc.nvim', 
