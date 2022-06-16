@@ -17,23 +17,18 @@ require('legendary').bind_keymaps({
     { '<leader>gg', ':Git<CR>' },
 
     -- files and menusini
-    { '<leader>p', ':Telescope find_files<CR>' },
-    { '<leader>f', ':Telescope find_files<CR>' },
-    { '<leader>b', ':Telescope buffers<CR>' },
-    { '<leader>c', ':Telescope commands<CR>' },
-    { '<leader>a', ':Telescope live_grep<CR>' },
-    { '<leader>t', ':Telescope tags<CR>' },
-    { '<leader>h', ':Telescope search_history<CR>' },
-    -- { '<leader>p', ':Files<CR>' },
-    -- { '<leader>f', ':Files<CR>' },
-    -- { '<leader>b', ':Buffers<CR>' },
-    -- { '<leader>c', ':Commands<CR>' },
-    -- { '<leader>a', ':Ag<CR>' },
-    -- { '<leader>t', ':Tags<CR>' },
-    -- { '<leader>h', ':History<CR>' },
+    { '<leader>p', function() require('legendary').find() end, description = "Command Palette" },
+    { '<leader>f', ':Telescope find_files<CR>', description = "Find files" },
+    { '<leader>b', ':Telescope buffers<CR>', description = "Find buffers" },
+    { '<leader>c', ':Telescope commands<CR>', description = "Find commands" },
+    { '<leader>a', ':Telescope live_grep<CR>', description = "Find all" },
+    { '<leader>t', ':Telescope tags<CR>', description = "Find tags" },
+    { '<leader>h', ':Telescope search_history<CR>', description = "Find commands history" },
 
-    -- coc
-    { '<Tab>', 'pumvisible() ? "<C-n>" : CheckBackspace() ? "<Tab>" : coc#refresh()', opts = { expr = true }, mode = { 'i' } },
+    -- completions
+    { '<Tab>', 'pumvisible() ? "<C-n>" : "<Tab>"', opts = { expr = true }, mode = { 'i' } },
     { '<S-Tab>', 'pumvisible() ? "<C-p>" : "<S-Tab>"', opts = { expr = true }, mode = { 'i' } }
+    -- { '<Tab>', 'pumvisible() ? "<C-n>" : CheckBackspace() ? "<Tab>" : coc#refresh()', opts = { expr = true }, mode = { 'i' } },
+    -- { '<S-Tab>', 'pumvisible() ? "<C-p>" : "<S-Tab>"', opts = { expr = true }, mode = { 'i' } }
 })
 

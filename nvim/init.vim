@@ -1,6 +1,8 @@
 " change leader from \ to ,
 let mapleader = ","
 
+lua require('plugins')
+
 " clipboard
 set clipboard+=unnamedplus
 
@@ -16,7 +18,6 @@ set expandtab
 " scroll
 set scrolloff=8
 
-lua require('plugins')
 " lua require('lsp')
 lua require('keymaps')
 " lua require('cmp')
