@@ -1,6 +1,0 @@
-{
-    "diagnostic.checkCurrentLine": true,
-    "sumneko-lua.enableNvimLuaDev": true,
-    "Lua.telemetry.enable": false
-}
-
