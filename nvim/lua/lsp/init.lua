@@ -21,12 +21,14 @@ lspconfig.util.default_config = vim.tbl_deep_extend(
 )
 
 -- python
---require'lspconfig'.pyright.setup()
 require'lspconfig'.pyright.setup{}
 
 -- lua
--- require'lsp.lua'
+--require'lsp.lua'
+--require'lspconfig'.sumneko_lua.setup {}
 require'lspconfig'.sumneko_lua.setup {
+    single_file_support = true,
+    on_attach = lsp_defaults.on_attach,
     settings = {
         Lua = {
             runtime = {
@@ -48,4 +50,5 @@ require'lspconfig'.sumneko_lua.setup {
         },
     },
 }
+
 

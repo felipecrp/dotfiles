@@ -2,6 +2,7 @@
 let mapleader = ","
 
 lua require('plugins')
+lua require('opt')
 
 " clipboard
 set clipboard+=unnamedplus
