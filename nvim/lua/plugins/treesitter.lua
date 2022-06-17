@@ -12,9 +12,12 @@ require('nvim-treesitter.configs').setup {
     },
     indent = {
         enable = true
-    }
+    },
 }
 
+require'treesitter-context'.setup{
+    enable = true
+}
 -- vim.cmd([[
 --     set foldmethod=expr
 --     set foldexpr=nvim_treesitter#foldexpr()
