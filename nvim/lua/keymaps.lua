@@ -35,15 +35,12 @@ require('legendary').bind_keymaps({
     -- completions
     { '<Tab>', 'pumvisible() ? "<C-n>" : "<Tab>"', opts = { expr = true }, mode = { 'i' } },
     { '<S-Tab>', 'pumvisible() ? "<C-p>" : "<S-Tab>"', opts = { expr = true }, mode = { 'i' } },
-    -- { '<Tab>', 'pumvisible() ? "<C-n>" : CheckBackspace() ? "<Tab>" : coc#refresh()', opts = { expr = true }, mode = { 'i' } },
-    -- { '<S-Tab>', 'pumvisible() ? "<C-p>" : "<S-Tab>"', opts = { expr = true }, mode = { 'i' } }
-    --
+ 
     -- test
     { '<leader>rt', ':TestSuite<CR>' },
     { '<leader>rf', ':TestFile<CR>' },
     { '<leader>rl', ':TestLast<CR>' },
     { '<leader>rv', ':TestVisit<CR>' },
     { '<leader>rn', ':TestNearest<CR>' },
-
 })
 

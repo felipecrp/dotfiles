@@ -83,9 +83,20 @@ return require('packer').startup(function(use)
     })
 
     -- test
-    use 'vim-test/vim-test'
+    use {
+        "nvim-neotest/neotest",
+        requires = {
+            "nvim-lua/plenary.nvim",
+            "nvim-treesitter/nvim-treesitter",
+            "antoinemadec/FixCursorHold.nvim"
+        }
+    }
+    --use 'vim-test/vim-test'
 
-    -- development debug
+    -- debug
+    use 'mfussenegger/nvim-dap'
+    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+
     -- use 'puremourning/vimspector'
 
     -- development tests

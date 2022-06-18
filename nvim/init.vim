@@ -20,3 +20,5 @@ lua require('keymaps')
 set termguicolors
 set background=dark
 colorscheme solarized
+
+
