@@ -14,8 +14,11 @@ require('legendary').bind_keymaps({
     { '<C-_>l', ':HopLineMW<CR>' },
 
     -- git
-    { '<leader>g', ':Git ' },
-    { '<leader>gg', ':Git<CR>' },
+    { '<leader>gs', ':Git<CR>' },
+    { '<leader>gg', ':Git ' },
+    { '<leader>gp', ':Git push<CR>' },
+    { '<leader>gP', ':Git pull<CR>' },
+    { '<leader>gc', ':Git commit<CR>' },
 
     -- files and menusini
     { '<leader>p', function() require('legendary').find() end, description = "Command Palette" },
