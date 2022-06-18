@@ -19,6 +19,7 @@ return require('packer').startup(function(use)
     -- user interface
     use 'bling/vim-airline'
 	use 'ericbn/vim-solarized'
+    use 'stevearc/dressing.nvim'
 
 	-- keybind and command palette
     use { 
@@ -29,9 +30,7 @@ return require('packer').startup(function(use)
             })
         end
     }
-    use {'stevearc/dressing.nvim'}
 
-    -- development
     -- git
     use 'tpope/vim-fugitive'
 
@@ -66,29 +65,25 @@ return require('packer').startup(function(use)
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-path'
     use 'hrsh7th/cmp-cmdline'
+    use 'hrsh7th/cmp-vsnip'
+    use 'hrsh7th/cmp-nvim-lua'
     use {
         'hrsh7th/nvim-cmp',
         config = function() require('plugins.cmp') end,
-        requires = { { 'hrsh7th/cmp-nvim-lsp'} } 
     }
-    use 'hrsh7th/cmp-vsnip'
+
     use 'hrsh7th/vim-vsnip'
-    use 'hrsh7th/cmp-nvim-lua'
-    --
-    --
-    -- language server
-    --use {
-    --    'neoclide/coc.nvim', 
-    --    branch = 'release'
-    --}
 
     -- language markdown
-    -- use 'godlygeek/tabular'
-    -- use 'preservim/vim-markdown'
-    -- use({
-    --     "iamcco/markdown-preview.nvim",
-    --     run = function() vim.fn["mkdp#util#install"]() end,
-    -- })
+    use 'godlygeek/tabular'
+    use 'preservim/vim-markdown'
+    use({
+        "iamcco/markdown-preview.nvim",
+        run = function() vim.fn["mkdp#util#install"]() end,
+    })
+
+    -- test
+    use 'vim-test/vim-test'
 
     -- development debug
     -- use 'puremourning/vimspector'
@@ -104,6 +99,9 @@ return require('packer').startup(function(use)
     --        }
     --    end
     --}
+
+    -- terminal
+    use 'edkolev/tmuxline.vim'
 end)
 
 
