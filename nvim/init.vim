@@ -1,5 +1,5 @@
 " change leader from \ to ,
-let mapleader = ","
+let mapleader = " "
 
 lua require('plugins')
 lua require('opt')

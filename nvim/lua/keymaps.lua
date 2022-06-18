@@ -5,12 +5,13 @@ require('legendary').bind_keymaps({
     { '<C-k>', '<C-w>k' },
     { '<C-l>', '<C-w>l' },
 
+    -- Switch buffers
+    { '<leader><Tab>', ':bprevious<CR>' },
     -- search 
-    { '/', '<Nop>' },
-    { '/c', ':HopChar1MW<CR>' },
-    { '/w', ':HopWordMW<CR>' },
-    { '/l', ':HopLineMW<CR>' },
-    { '//', '/' },
+    { '<M-/>', ':HopChar1MW<CR>' },
+    { '\\', ':HopChar1MW<CR>' },
+    { '<C-_>w', ':HopWordMW<CR>' },
+    { '<C-_>l', ':HopLineMW<CR>' },
 
     -- git
     { '<leader>g', ':Git ' },
@@ -18,12 +19,12 @@ require('legendary').bind_keymaps({
 
     -- files and menusini
     { '<leader>p', function() require('legendary').find() end, description = "Command Palette" },
-    { '<leader>f', ':Telescope find_files<CR>', description = "Find files" },
-    { '<leader>b', ':Telescope buffers<CR>', description = "Find buffers" },
-    { '<leader>c', ':Telescope commands<CR>', description = "Find commands" },
-    { '<leader>a', ':Telescope live_grep<CR>', description = "Find all" },
-    { '<leader>t', ':Telescope tags<CR>', description = "Find tags" },
-    { '<leader>h', ':Telescope search_history<CR>', description = "Find commands history" },
+    { ',f', ':Telescope find_files<CR>', description = "Find files" },
+    { ',b', ':Telescope buffers<CR>', description = "Find buffers" },
+    { ',c', ':Telescope commands<CR>', description = "Find commands" },
+    { ',a', ':Telescope live_grep<CR>', description = "Find all" },
+    { ',t', ':Telescope tags<CR>', description = "Find tags" },
+    { ',h', ':Telescope search_history<CR>', description = "Find commands history" },
 
     -- completions
     { '<Tab>', 'pumvisible() ? "<C-n>" : "<Tab>"', opts = { expr = true }, mode = { 'i' } },
