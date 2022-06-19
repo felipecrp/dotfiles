@@ -16,3 +16,5 @@ vim.opt.scrolloff = 8
 -- clipboard
 vim.opt.clipboard = vim.opt.clipboard + 'unnamedplus'
 
+vim.opt.termguicolors = true
+

@@ -1,4 +1,5 @@
 
+-- , config = function() require'plugins.dap' end }
 local dap = require('dap')
 dap.configurations.python = {
     {
