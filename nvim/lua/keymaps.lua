@@ -1,4 +1,8 @@
 require('legendary').bind_keymaps({
+    -- menu
+    { '<C-s>', ':w<CR>', description = 'Save file' },
+    { '<Leader>fs', ':w<CR>', description = 'Save file' },
+    
     -- window navigation
     { '<C-h>', '<C-w>h' },
     { '<C-j>', '<C-w>j' },
@@ -6,7 +10,7 @@ require('legendary').bind_keymaps({
     { '<C-l>', '<C-w>l' },
 
     -- Switch buffers
-    { '<leader><Tab>', ':bprevious<CR>' },
+    { '<Leader><Tab>', ':bprevious<CR>' },
     -- search 
     { '<M-/>', ':HopChar1MW<CR>' },
     { '\\', ':HopChar1MW<CR>' },
@@ -14,11 +18,11 @@ require('legendary').bind_keymaps({
     { '<C-_>l', ':HopLineMW<CR>' },
 
     -- git
-    { '<leader>gs', ':Git<CR>' },
-    { '<leader>gg', ':Git ' },
-    { '<leader>gp', ':Git push<CR>' },
-    { '<leader>gP', ':Git pull<CR>' },
-    { '<leader>gc', ':Git commit<CR>' },
+    { '<Leader>gs', ':Git<CR>' },
+    { '<Leader>gg', ':Git ' },
+    { '<Leader>gp', ':Git push<CR>' },
+    { '<Leader>gP', ':Git pull<CR>' },
+    { '<Leader>gc', ':Git commit<CR>' },
 
     -- files and menusini
     { ',p', function() require('legendary').find() end, description = "Command Palette" },
@@ -30,17 +34,17 @@ require('legendary').bind_keymaps({
     { ',h', ':Telescope search_history<CR>', description = "Find commands history" },
 
     -- comment
-    { '<leader>/', ':CommentToggle<CR>' },
+    { '<Leader>/', ':CommentToggle<CR>' },
 
     -- completions
     { '<Tab>', 'pumvisible() ? "<C-n>" : "<Tab>"', opts = { expr = true }, mode = { 'i' } },
     { '<S-Tab>', 'pumvisible() ? "<C-p>" : "<S-Tab>"', opts = { expr = true }, mode = { 'i' } },
  
     -- test
-    { '<leader>rt', ':TestSuite<CR>' },
-    { '<leader>rf', ':TestFile<CR>' },
-    { '<leader>rl', ':TestLast<CR>' },
-    { '<leader>rv', ':TestVisit<CR>' },
-    { '<leader>rn', ':TestNearest<CR>' },
+    { '<Leader>rt', ':TestSuite<CR>' },
+    { '<Leader>rf', ':TestFile<CR>' },
+    { '<Leader>rl', ':TestLast<CR>' },
+    { '<Leader>rv', ':TestVisit<CR>' },
+    { '<Leader>rn', ':TestNearest<CR>' },
 })
 

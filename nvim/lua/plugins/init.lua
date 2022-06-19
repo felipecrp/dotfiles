@@ -75,7 +75,6 @@ return require('packer').startup(function(use)
         'hrsh7th/nvim-cmp',
         config = function() require('plugins.cmp') end,
     }
-
     use 'hrsh7th/vim-vsnip'
 
     -- language markdown
