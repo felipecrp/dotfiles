@@ -44,10 +44,14 @@ return require('packer').startup(function(use)
 
     -- comments
     use { 
-        "terrortylor/nvim-comment",
-        config = function()
-            require('nvim_comment').setup()
-        end
+        'terrortylor/nvim-comment',
+        config = function() require('nvim_comment').setup() end
+    }
+
+    -- auto pairs
+    use {
+        "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
     }
 
     -- language server
@@ -78,38 +82,33 @@ return require('packer').startup(function(use)
     use 'godlygeek/tabular'
     use 'preservim/vim-markdown'
     use({
-        "iamcco/markdown-preview.nvim",
-        run = function() vim.fn["mkdp#util#install"]() end,
+        'iamcco/markdown-preview.nvim',
+        run = function() vim.fn['mkdp#util#install']() end,
     })
 
     -- test
     use {
-        "nvim-neotest/neotest",
+        'nvim-neotest/neotest',
         requires = {
-            "nvim-lua/plenary.nvim",
-            "nvim-treesitter/nvim-treesitter",
-            "antoinemadec/FixCursorHold.nvim"
-        }
+            'nvim-lua/plenary.nvim',
+            'nvim-treesitter/nvim-treesitter',
+            'antoinemadec/FixCursorHold.nvim'
+        },
+        config = function() require'plugins.neotest' end,
     }
-    --use 'vim-test/vim-test'
+    use {
+        'nvim-neotest/neotest-python',
+        requires = 'nvim-neotest/neotest',
+    }
+    use {
+        'nvim-neotest/neotest-vim-test',
+        requires = 'vim-test/vim-test'
+    }
 
     -- debug
-    use 'mfussenegger/nvim-dap'
-    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
-
-    -- use 'puremourning/vimspector'
-
-    -- development tests
-    --use 'vim-test/vim-test'
-    --use {
-    --    "klen/nvim-test",
-    --    config = function()
-    --        require('nvim-test').setup()
-    --        require('nvim-test.runners.pytest'):setup {
-    --            command = "pytest"                                       -- a command to run the test runner
-    --        }
-    --    end
-    --}
+    use 'mfussenegger/nvim-dap-python'
+    use { 'mfussenegger/nvim-dap', config = function() require'plugins.dap' end }
+    use { 'rcarriga/nvim-dap-ui', requires = {'mfussenegger/nvim-dap'} }
 
     -- terminal
     use 'edkolev/tmuxline.vim'
