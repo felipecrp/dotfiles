@@ -5,7 +5,7 @@ return require('packer').startup(function(use)
 
     -- search
     use 'nvim-telescope/telescope.nvim'
-	
+
     -- navigation
 	use { 'phaazon/hop.nvim', config = function() require'hop'.setup() end }
 
@@ -14,6 +14,7 @@ return require('packer').startup(function(use)
 	use 'ericbn/vim-solarized'
     use 'lifepillar/vim-solarized8'
     use 'stevearc/dressing.nvim'
+    use 'ryanoasis/vim-devicons'
 
 	-- keybind and command palette
     use { 'mrjones2014/legendary.nvim', config = function() require('legendary').setup({ include_builtin = true }) end }
@@ -34,7 +35,7 @@ return require('packer').startup(function(use)
     -- language server
     use 'neovim/nvim-lspconfig'
     use 'williamboman/nvim-lsp-installer'
-   
+
     -- auto-complete
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-buffer'
@@ -67,6 +68,7 @@ return require('packer').startup(function(use)
     use 'mfussenegger/nvim-dap'
     use 'mfussenegger/nvim-dap-python'
     use 'rcarriga/nvim-dap-ui'
+    use 'Pocco81/dap-buddy.nvim'
 
     -- terminal
     use 'edkolev/tmuxline.vim'

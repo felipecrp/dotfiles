@@ -1,12 +1,12 @@
 
 vim.g.mapleader = " "
 
-require'plugins'
-require'code'
-require'debug'
-require'test'
-require'opt'
-require'keymaps'
+require'.plugins'
+require'.code'
+require'.debug'
+require'.test'
+require'.opt'
+require'.keymaps'
 
 vim.cmd [[
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"

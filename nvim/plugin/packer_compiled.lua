@@ -104,6 +104,11 @@ _G.packer_plugins = {
     path = "/home/felipecrp/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
     url = "https://github.com/hrsh7th/cmp-vsnip"
   },
+  ["dap-buddy.nvim"] = {
+    loaded = true,
+    path = "/home/felipecrp/.local/share/nvim/site/pack/packer/start/dap-buddy.nvim",
+    url = "https://github.com/Pocco81/dap-buddy.nvim"
+  },
   ["dressing.nvim"] = {
     loaded = true,
     path = "/home/felipecrp/.local/share/nvim/site/pack/packer/start/dressing.nvim",
@@ -220,6 +225,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/felipecrp/.local/share/nvim/site/pack/packer/start/vim-airline",
     url = "https://github.com/bling/vim-airline"
+  },
+  ["vim-devicons"] = {
+    loaded = true,
+    path = "/home/felipecrp/.local/share/nvim/site/pack/packer/start/vim-devicons",
+    url = "https://github.com/ryanoasis/vim-devicons"
   },
   ["vim-fugitive"] = {
     loaded = true,

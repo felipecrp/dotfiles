@@ -1,4 +1,5 @@
 
+vim.opt.mouse = 'a'
 vim.opt.cursorline = true
 
 -- line number
