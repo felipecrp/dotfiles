@@ -119,6 +119,8 @@ lspconfig.sumneko_lua.setup {
     },
 }
 
+-- lspconfig.grammarly.setup { clientId = 0 }
+
 -- auto complete
 local cmp = require'cmp'
 
