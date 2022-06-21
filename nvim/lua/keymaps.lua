@@ -48,3 +48,6 @@ require('legendary').bind_keymaps({
     { '<Leader>rn', ':TestNearest<CR>' },
 })
 
+vim.cmd[[
+    imap jk <Esc>
+]]
