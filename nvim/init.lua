@@ -6,5 +6,6 @@ require'.code'
 require'.debug'
 require'.test'
 require'.opt'
+require'.ui'
 require'.keymaps'
 

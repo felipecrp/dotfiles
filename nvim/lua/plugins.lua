@@ -15,6 +15,7 @@ return require('packer').startup(function(use)
     use 'lifepillar/vim-solarized8'
     use 'stevearc/dressing.nvim'
     use 'ryanoasis/vim-devicons'
+    use 'b0o/incline.nvim'
 
 	-- keybind and command palette
     use { 'mrjones2014/legendary.nvim', config = function() require('legendary').setup({ include_builtin = true }) end }
@@ -72,6 +73,9 @@ return require('packer').startup(function(use)
 
     -- terminal
     use 'edkolev/tmuxline.vim'
+    
+    -- jupyter
+    use 'untitled-ai/jupyter_ascending.vim'
 end)
 
 
