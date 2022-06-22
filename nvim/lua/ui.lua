@@ -7,7 +7,8 @@ require('incline').setup()
 -- ]]
 
 vim.opt.background = 'dark'
-vim.cmd 'colorscheme solarized'
+vim.cmd 'colorscheme gruvbox'
+-- vim.cmd 'colorscheme solarized'
 -- vim.cmd [[ 
 --     if &background == "dark"     
 --       let s:base03 = "NONE"     
