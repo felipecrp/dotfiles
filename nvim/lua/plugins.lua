@@ -49,6 +49,7 @@ return require('packer').startup(function(use)
     use 'hrsh7th/cmp-nvim-lua'
     use 'hrsh7th/vim-vsnip'
     use 'hrsh7th/nvim-cmp'
+    use 'f3fora/cmp-spell'
 
     -- language markdown
     use 'godlygeek/tabular'
@@ -76,7 +77,8 @@ return require('packer').startup(function(use)
 
     -- terminal
     use 'edkolev/tmuxline.vim'
-    
+    use 'christoomey/vim-tmux-navigator'
+
     -- jupyter
     use 'untitled-ai/jupyter_ascending.vim'
 end)

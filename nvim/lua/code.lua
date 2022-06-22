@@ -119,6 +119,9 @@ lspconfig.sumneko_lua.setup {
     },
 }
 
+-- R 
+lspconfig.r_language_server.setup {}
+
 -- lspconfig.grammarly.setup { clientId = 0 }
 
 -- auto complete
@@ -178,6 +181,7 @@ cmp.setup({
         { name = 'nvim_lsp' },
         { name = 'vsnip' }, -- For vsnip users.
         { name = 'nvim_lua' },
+        -- { name = 'spell' },
         -- { name = 'luasnip' }, -- For luasnip users.
         -- { name = 'ultisnips' }, -- For ultisnips users.
         -- { name = 'snippy' }, -- For snippy users.
