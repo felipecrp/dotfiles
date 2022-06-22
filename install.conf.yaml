@@ -7,4 +7,6 @@
     ~/.config/tmux: tmux
     ~/.config/nvim: nvim
     ~/.zshrc: zsh/zshrc
+    ~/.alacritty.yml: alacritty/alacritty.yml
+    ~/.config/kitty: kitty
 

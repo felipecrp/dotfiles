@@ -17,6 +17,9 @@ return require('packer').startup(function(use)
     use 'ryanoasis/vim-devicons'
     use 'b0o/incline.nvim'
 
+    -- themes
+    use 'morhetz/gruvbox'
+
 	-- keybind and command palette
     use { 'mrjones2014/legendary.nvim', config = function() require('legendary').setup({ include_builtin = true }) end }
 
