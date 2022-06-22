@@ -94,7 +94,23 @@ env:
   #history: 10000
   # Scrolling distance multiplier.
   #multiplier: 3
-  # Font configuration
+  # Font Configuration
+# font:
+#   normal:
+#     family: FiraCode Nerd Font Mono
+#     style: Regular
+#
+#   bold:
+#     family: FiraCode Nerd Font Mono
+#     style: Bold
+#
+#   italic:
+#     family: FiraCode Nerd Font Mono
+#     style: Italic
+#
+#   bold_italic:
+#     family: FiraCode Nerd Font Mono
+    # style: Bold Italic
   #font:
   # Normal (roman) font face
   #normal:
