@@ -2,7 +2,7 @@ require('legendary').bind_keymaps({
     -- menu
     { '<C-s>', ':w<CR>', description = 'Save file' },
     { '<Leader>fs', ':w<CR>', description = 'Save file' },
-    
+
     -- window navigation
     { '<C-h>', '<C-w>h' },
     { '<C-j>', '<C-w>j' },
@@ -11,7 +11,8 @@ require('legendary').bind_keymaps({
 
     -- Switch buffers
     { '<Leader><Tab>', ':bprevious<CR>' },
-    -- search 
+
+    -- search
     { '<M-/>', ':HopChar1MW<CR>' },
     { '\\', ':HopChar1MW<CR>' },
     { '<C-_>w', ':HopWordMW<CR>' },
@@ -39,7 +40,7 @@ require('legendary').bind_keymaps({
     -- completions
     { '<Tab>', 'pumvisible() ? "<C-n>" : "<Tab>"', opts = { expr = true }, mode = { 'i' } },
     { '<S-Tab>', 'pumvisible() ? "<C-p>" : "<S-Tab>"', opts = { expr = true }, mode = { 'i' } },
- 
+
     -- test
     { '<Leader>rt', ':TestSuite<CR>' },
     { '<Leader>rf', ':TestFile<CR>' },

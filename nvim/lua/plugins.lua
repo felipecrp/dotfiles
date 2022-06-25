@@ -77,6 +77,10 @@ return require('packer').startup(function(use)
     -- terminal
     use 'edkolev/tmuxline.vim'
     
+    -- repl
+    use 'klafyvel/vim-slime-cells'
+    use 'jpalardy/vim-slime'
+
     -- jupyter
     use 'untitled-ai/jupyter_ascending.vim'
 end)
