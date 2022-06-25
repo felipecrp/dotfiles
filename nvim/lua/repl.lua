@@ -6,9 +6,10 @@ vim.g.slime_dont_ask_default = 1
 vim.g.slime_bracketed_paste = 1
 vim.g.slime_no_mappings = 1
 vim.cmd([[
-    nmap <leader>cv <Plug>SlimeConfig
-    nmap <leader>cc <Plug>SlimeCellsSendAndGoToNext
-    nmap <leader>cj <Plug>SlimeCellsNext
-    nmap <leader>ck <Plug>SlimeCellsPrev
+    nmap <leader>sv <Plug>SlimeConfig
+    nmap <leader>sc <Plug>SlimeCellsSendAndGoToNext
+    nmap <leader>sp <Plug>SlimeParagraphSend
+    nmap <leader>sj <Plug>SlimeCellsNext
+    nmap <leader>sk <Plug>SlimeCellsPrev
 ]])
 
