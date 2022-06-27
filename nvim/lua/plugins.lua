@@ -7,7 +7,12 @@ return require('packer').startup(function(use)
     use 'nvim-telescope/telescope.nvim'
 
     -- navigation
-	use { 'phaazon/hop.nvim', config = function() require'hop'.setup() end }
+	use {
+        'phaazon/hop.nvim',
+        config = function()
+            require'hop'.setup()
+        end
+    }
 
     -- user interface
     use 'bling/vim-airline'
@@ -21,13 +26,21 @@ return require('packer').startup(function(use)
     use 'morhetz/gruvbox'
 
 	-- keybind and command palette
-    use { 'mrjones2014/legendary.nvim', config = function() require('legendary').setup({ include_builtin = true }) end }
+    use {
+        'mrjones2014/legendary.nvim',
+        config = function()
+            require('legendary').setup({ include_builtin = true })
+        end
+    }
 
     -- git
     use 'tpope/vim-fugitive'
 
     -- highlights and navigation
-    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate'
+    }
     use 'nvim-treesitter/nvim-treesitter-context'
 
     -- comments
@@ -79,8 +92,11 @@ return require('packer').startup(function(use)
     use 'edkolev/tmuxline.vim'
     use 'christoomey/vim-tmux-navigator'
 
-    -- jupyter
-    use 'untitled-ai/jupyter_ascending.vim'
-end)
+    -- repl
+    use 'klafyvel/vim-slime-cells'
+    use 'jpalardy/vim-slime'
 
+    -- jupyter
+    -- use 'untitled-ai/jupyter_ascending.vim'
+end)
 

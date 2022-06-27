@@ -1,5 +1,6 @@
-
+-- Floating window name
 require('incline').setup()
+
 
 -- vim.cmd [[
 --     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
@@ -18,3 +19,7 @@ vim.cmd 'colorscheme gruvbox'
 
 vim.cmd[[ highlight WinSeparator guibg=None ]]
 vim.opt.laststatus = 3
+
+vim.api.nvim_set_keymap('n', '<Tab>', ':bn<CR>', { noremap = true } )
+vim.api.nvim_set_keymap('n', '<S-Tab>', ':bn<CR>', { noremap = true } )
+

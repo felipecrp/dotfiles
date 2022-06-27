@@ -91,6 +91,9 @@ lspconfig.pyright.setup {
     capabilities = lsp_defaults.capabilities,
 }
 
+-- R
+lspconfig.r_language_server.setup {}
+
 -- lua
 lspconfig.sumneko_lua.setup {
     on_attach = lsp_defaults.on_attach,
@@ -213,7 +216,7 @@ cmp.setup.cmdline(':', {
     sources = cmp.config.sources({
         { name = 'path' }
     }, {
-        { name = 'cmdline' }
+        { name = 'cmdline', keyword_pattern=[=[[^[:blank:]\!]*]=], keyword_length=3 }
     })
 })
 
