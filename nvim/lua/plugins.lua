@@ -16,6 +16,8 @@ return require('packer').startup(function(use)
 
     -- user interface
     use 'bling/vim-airline'
+    use 'vim-airline/vim-airline-themes'
+    -- use 'feline-nvim/feline.nvim'
 	use 'ericbn/vim-solarized'
     use 'lifepillar/vim-solarized8'
     use 'stevearc/dressing.nvim'
