@@ -75,7 +75,9 @@ export KITTY_DISABLE_WAYLAND=1
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git pipenv ssh-agent)
+plugins=(git pipenv ssh-agent z)
+
+# ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
 
 
 # User configuration
