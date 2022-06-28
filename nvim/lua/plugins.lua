@@ -16,6 +16,8 @@ return require('packer').startup(function(use)
 
     -- user interface
     use 'bling/vim-airline'
+    use 'vim-airline/vim-airline-themes'
+    -- use 'feline-nvim/feline.nvim'
 	use 'ericbn/vim-solarized'
     use 'lifepillar/vim-solarized8'
     use 'stevearc/dressing.nvim'
@@ -62,6 +64,7 @@ return require('packer').startup(function(use)
     use 'hrsh7th/cmp-nvim-lua'
     use 'hrsh7th/vim-vsnip'
     use 'hrsh7th/nvim-cmp'
+    use 'f3fora/cmp-spell'
 
     -- language markdown
     use 'godlygeek/tabular'
@@ -96,6 +99,6 @@ return require('packer').startup(function(use)
     use 'jpalardy/vim-slime'
 
     -- jupyter
-    use 'untitled-ai/jupyter_ascending.vim'
+    -- use 'untitled-ai/jupyter_ascending.vim'
 end)
 

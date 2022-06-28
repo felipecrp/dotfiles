@@ -14,7 +14,9 @@ ZSH_THEME="robbyrussell"
 export LANG="en_US.UTF-8"
 export LC_CTYPE="pt_BR.UTF-8"
 
-export KITTY_DISABLE_WAYLAND=1
+export LS_COLORS=$LS_COLORS':ow=36;01'
+zstyle ':completion:*' list-colors
+
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -94,6 +96,9 @@ plugins=(git pipenv ssh-agent z)
 #   export EDITOR='mvim'
 # fi
 
+export EDITOR='nvim'
+export VISUAL='nvim'
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -106,7 +111,8 @@ plugins=(git pipenv ssh-agent z)
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-. /opt/asdf-vm/asdf.sh
+source /opt/asdf-vm/asdf.sh
+source $HOME/.env
 
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
@@ -116,3 +122,4 @@ fi
 export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0.0
 
 source $ZSH/oh-my-zsh.sh
+
