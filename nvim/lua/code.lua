@@ -128,6 +128,8 @@ lspconfig.r_language_server.setup {}
 
 -- lspconfig.grammarly.setup { clientId = 0 }
 
+lspconfig.cssls.setup {}
+
 -- auto complete
 local cmp = require'cmp'
 

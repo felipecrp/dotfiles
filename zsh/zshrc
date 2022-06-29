@@ -112,7 +112,9 @@ export VISUAL='nvim'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 source /opt/asdf-vm/asdf.sh
-source $HOME/.env
+if [[ -f "$HOME/.env" ]]; then
+    source $HOME/.env
+fi
 
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
