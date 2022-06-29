@@ -95,6 +95,10 @@ lspconfig.pyright.setup {
 -- R
 lspconfig.r_language_server.setup {}
 
+-- Java
+lspconfig.jdtls.setup {}
+
+
 -- lua
 lspconfig.sumneko_lua.setup {
     on_attach = lsp_defaults.on_attach,
