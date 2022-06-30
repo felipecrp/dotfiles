@@ -22,5 +22,3 @@ vim.opt.clipboard = vim.opt.clipboard + 'unnamedplus'
 
 vim.opt.termguicolors = true
 
--- windows
-
