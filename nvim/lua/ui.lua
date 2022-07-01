@@ -1,6 +1,13 @@
 -- Floating window name
 require('incline').setup()
 
+local telescope = require'telescope'
+telescope.setup {
+    defaults = {
+        layout_strategy = 'vertical',
+        layout_config = { height = 0.95 },
+    }
+}
 
 -- vim.cmd [[
 --     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"

@@ -1,3 +1,19 @@
+--vim.api.nvim_del_keymap("n", "s")
+
+local legendary = require'legendary'
+
+-- navigation
+legendary.bind_keymaps {
+    { 's' },
+    { 'sc' , require'hop'.hint_char1 },
+    { 'sf' , ':Telescope find_files<CR>', description = "Find files" },
+    { 'sb' , ':Telescope buffers<CR>', description = "Find buffers" },
+    -- { 'sc' , ':Telescope commands<CR>', description = "Find commands" },
+    { 'sa' , ':Telescope live_grep<CR>', description = "Find all" },
+    { 'st' , ':Telescope tags<CR>', description = "Find tags" },
+    { 'sh' , ':Telescope search_history<CR>', description = "Find commands history" },
+}
+
 require('legendary').bind_keymaps({
     -- menu
     { '<C-s>', ':w<CR>', description = 'Save file' },
