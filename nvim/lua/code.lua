@@ -134,6 +134,8 @@ lspconfig.r_language_server.setup {}
 
 lspconfig.cssls.setup {}
 
+lspconfig.tsserver.setup {}
+
 -- auto complete
 local cmp = require'cmp'
 
