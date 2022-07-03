@@ -5,7 +5,11 @@ local telescope = require'telescope'
 telescope.setup {
     defaults = {
         layout_strategy = 'vertical',
-        layout_config = { height = 0.95 },
+        layout_config = { 
+            height = 0.95,
+            preview_cutoff = 25,
+            -- prompt_position = 'top',
+        },
     }
 }
 
@@ -15,7 +19,7 @@ telescope.setup {
 -- ]]
 
 vim.opt.background = 'dark'
-vim.cmd 'colorscheme gruvbox'
+vim.cmd 'colorscheme solarized8'
 -- vim.cmd 'colorscheme solarized'
 -- vim.cmd [[ 
 --     if &background == "dark"     
