@@ -88,6 +88,7 @@ return require('packer').startup(function(use)
     use 'mfussenegger/nvim-dap'
     use 'mfussenegger/nvim-dap-python'
     use 'rcarriga/nvim-dap-ui'
+    use 'theHamsta/nvim-dap-virtual-text'
     use 'Pocco81/dap-buddy.nvim'
 
     -- terminal

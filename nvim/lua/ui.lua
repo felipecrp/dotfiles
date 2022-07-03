@@ -4,7 +4,7 @@ require('incline').setup()
 local telescope = require'telescope'
 telescope.setup {
     defaults = {
-        layout_strategy = 'vertical',
+        -- layout_strategy = 'vertical',
         layout_config = { 
             height = 0.95,
             preview_cutoff = 25,
