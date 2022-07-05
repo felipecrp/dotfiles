@@ -19,7 +19,8 @@ telescope.setup {
 -- ]]
 
 vim.opt.background = 'dark'
-vim.cmd 'colorscheme solarized8'
+-- vim.cmd 'colorscheme solarized8'
+vim.cmd ' colorscheme gruvbox'
 -- vim.cmd 'colorscheme solarized'
 -- vim.cmd [[ 
 --     if &background == "dark"     
