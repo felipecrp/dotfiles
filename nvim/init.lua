@@ -2,6 +2,7 @@
 vim.g.mapleader = " "
 
 require'.plugins'
+require'.lsp'
 require'.code'
 require'.debug'
 require'.test'
