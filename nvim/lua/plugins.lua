@@ -18,14 +18,15 @@ return require('packer').startup(function(use)
     use 'bling/vim-airline'
     use 'vim-airline/vim-airline-themes'
     -- use 'feline-nvim/feline.nvim'
-	use 'ericbn/vim-solarized'
-    use 'lifepillar/vim-solarized8'
     use 'stevearc/dressing.nvim'
     use 'ryanoasis/vim-devicons'
     use 'b0o/incline.nvim'
 
     -- themes
+	use 'ericbn/vim-solarized'
+    use 'lifepillar/vim-solarized8'
     use 'morhetz/gruvbox'
+    use 'marko-cerovac/material.nvim'
 
 	-- keybind and command palette
     use {
