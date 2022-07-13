@@ -1,6 +1,9 @@
 --vim.api.nvim_del_keymap("n", "s")
 
 local legendary = require'legendary'
+local opts = { noremap=true, silent=true }
+
+vim.keymap.set('n', 'z=', '<cmd>Telescope spell_suggest<cr>', opts)
 
 -- navigation
 legendary.bind_keymaps {

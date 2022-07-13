@@ -22,5 +22,8 @@ vim.opt.scrolloff = 8
 -- clipboard
 vim.opt.clipboard = vim.opt.clipboard + 'unnamedplus'
 
+-- spell
+vim.opt.spellsuggest = { 'best', 9 }
+
 vim.opt.termguicolors = true
 
