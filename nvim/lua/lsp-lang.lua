@@ -40,3 +40,8 @@ lsp_config.cssls.setup {}
 -- typescript
 lsp_config.tsserver.setup {}
 
+-- grammarly
+-- lsp_config.grammarly.setup {}
+
+-- latex
+lsp_config.texlab.setup {}
