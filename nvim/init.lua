@@ -1,13 +1,8 @@
 
-vim.g.mapleader = " "
-
-require'.plugins'
-require'.lsp'
-require'.code'
-require'.debug'
-require'.test'
-require'.repl'
-require'.opt'
-require'.ui'
-require'.keymaps'
+require("plugins")
+require("options")
+require("lsp")
+require("completion")
+require("keymaps")
+require("ui")
 

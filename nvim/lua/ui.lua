@@ -20,7 +20,7 @@ telescope.setup {
 
 vim.opt.background = 'dark'
 -- vim.cmd 'colorscheme solarized8'
-vim.cmd ' colorscheme gruvbox'
+-- vim.cmd ' colorscheme gruvbox'
 -- vim.cmd 'colorscheme solarized'
 -- vim.cmd [[ 
 --     if &background == "dark"     
@@ -32,6 +32,5 @@ vim.cmd ' colorscheme gruvbox'
 vim.cmd[[ highlight WinSeparator guibg=None ]]
 vim.opt.laststatus = 3
 
-vim.api.nvim_set_keymap('n', '<Tab>', ':bn<CR>', { noremap = true } )
-vim.api.nvim_set_keymap('n', '<S-Tab>', ':bn<CR>', { noremap = true } )
+vim.cmd.colorscheme("gruvbox")
 

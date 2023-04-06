@@ -1,48 +1,42 @@
--- LSP General Configuration
+require("mason").setup()
 
-local lsp_config = require'lspconfig'
-local lsp_installer = require'nvim-lsp-installer'
-local cmp_lsp = require 'cmp_nvim_lsp'
-local opts = { noremap=true, silent=true }
-
-lsp_installer.setup {}
-
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
-vim.keymap.set('n', '<space>de', vim.diagnostic.open_float, opts)
-vim.keymap.set('n', '<space>dq', vim.diagnostic.setloclist, opts)
-
-local lsp_config_defaults = {
-    -- flags = {
-    --     debounce_text_changes = 150,
-    --     allow_incremental_sync = false,
-    -- },
-    capabilities = cmp_lsp.update_capabilities(
-        vim.lsp.protocol.make_client_capabilities()
-    ),
-    on_attach = function(client, bufnr)
-        local bufopt = { noremap=true, silent=true, buffer=bufnr }
-
-        vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopt)
-        vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopt)
-        vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopt)
-        vim.keymap.set('n', 'gT', vim.lsp.buf.type_definition, bufopt)
-        vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopt)
-
-        vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopt)
-        vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, bufopt)
-
-        vim.keymap.set('n', '<leader>cn', vim.lsp.buf.rename, bufopt)
-        vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, bufopt)
-        vim.keymap.set('n', '<leader>cf', vim.lsp.buf.formatting, bufopt)
-    end,
+require("mason-lspconfig").setup {
+  ensure_installed = {
+    "lua_ls",
+    "pylsp"
+  }
 }
 
-lsp_config.util.default_config = vim.tbl_extend(
-    'force',
-    lsp_config.util.default_config,
-    lsp_config_defaults
-)
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
+require("mason-lspconfig").setup_handlers {
+  -- The first entry (without a key) will be the default handler
+  -- and will be called for each installed server that doesn't have
+  -- a dedicated handler.
+  function (server_name) -- default handler (optional)
+    require("lspconfig")[server_name].setup {
+      capabilities = capabilities
+    }
+  end,
 
-require'.lsp-lang'
+  ["lua_ls"] = function ()
+    require("lspconfig")["lua_ls"].setup {
+      settings = {
+        Lua = {
+          diagnostics = {
+            globals = { "vim" }
+          },
+          workspace = {
+            -- Make the server aware of Neovim runtime files
+            library = vim.api.nvim_get_runtime_file("", true),
+          },
+          telemetry = {
+            -- Do not send telemetry data containing a randomized but unique identifier
+            enable = false,
+          },
+        }
+      },
+      capabilities = capabilities
+    }
+  end,
+}
 
