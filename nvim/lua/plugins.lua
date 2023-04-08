@@ -47,6 +47,9 @@ return require('packer').startup(function(use)
     use 'L3MON4D3/LuaSnip'
     use 'saadparwaiz1/cmp_luasnip'
 
+    -- git
+    use "tpope/vim-fugitive"
+
     -- ui
     use 'b0o/incline.nvim'
     use 'morhetz/gruvbox'
