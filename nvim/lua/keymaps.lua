@@ -1,6 +1,11 @@
 vim.g.mapleader = " "
 vim.keymap.set('i', 'jk', '<ESC>', {})
 
+-- typing
+vim.keymap.set('n', '<A-q>', 'gqq', {})
+vim.keymap.set('i', '<A-q>', 'gqq', {})
+
+-- navigation
 local telescope_builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', telescope_builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', telescope_builtin.live_grep, {})

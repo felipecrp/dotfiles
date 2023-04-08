@@ -42,6 +42,7 @@ return require('packer').startup(function(use)
     use 'hrsh7th/cmp-path'
     use 'hrsh7th/cmp-cmdline'
     use 'hrsh7th/nvim-cmp'
+    use 'f3fora/cmp-spell'
 
     -- auto complete snipets
     use 'L3MON4D3/LuaSnip'
