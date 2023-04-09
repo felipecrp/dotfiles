@@ -6,7 +6,7 @@ return require('packer').startup(function(use)
     use {
         'nvim-telescope/telescope.nvim',
         tag = '0.1.1',
-	requires = { { 'nvim-lua/plenary.nvim' } }
+        requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
     -- navigation
@@ -21,10 +21,12 @@ return require('packer').startup(function(use)
     use {
         'nvim-treesitter/nvim-treesitter',
         run = function()
-            local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+            local ts_install = require('nvim-treesitter.install')
+            local ts_update = ts_install.update({ with_sync = true })
             ts_update()
         end,
     }
+    use 'nvim-treesitter/nvim-treesitter-context'
 
     -- lsp
     use 'neovim/nvim-lspconfig'
@@ -50,6 +52,9 @@ return require('packer').startup(function(use)
 
     -- git
     use "tpope/vim-fugitive"
+
+    -- latex
+    -- use 'lervag/vimtex'
 
     -- ui
     use 'b0o/incline.nvim'
