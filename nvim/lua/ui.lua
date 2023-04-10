@@ -39,6 +39,11 @@ require('tabline').setup {
 }
 
 require("zen-mode").setup {
+    on_open = function(win)
+        require("lualine").hide({ unhide = true })
+    end,
+    on_close = function()
+    end
 }
 
 -- vim.cmd [[
