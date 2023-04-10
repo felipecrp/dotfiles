@@ -55,6 +55,7 @@ return require('packer').startup(function(use)
 
     -- latex
     use 'lervag/vimtex'
+    use 'frabjous/knap'
 
     -- ui
     use "SmiteshP/nvim-navic"
@@ -66,6 +67,7 @@ return require('packer').startup(function(use)
     }
     use 'kdheepak/tabline.nvim'
     use 'folke/zen-mode.nvim'
-    use 'smithbm2316/centerpad.nvim'
+    -- use 'smithbm2316/centerpad.nvim'
+    use { "shortcuts/no-neck-pain.nvim", tag = "*" }
 end)
 
