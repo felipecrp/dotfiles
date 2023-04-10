@@ -1,16 +1,44 @@
 -- Floating window name
-require('incline').setup()
+--require('incline').setup()
 
 local telescope = require'telescope'
 telescope.setup {
     defaults = {
         -- layout_strategy = 'vertical',
-        layout_config = { 
+        layout_config = {
             height = 0.95,
             preview_cutoff = 25,
             -- prompt_position = 'top',
         },
     }
+}
+
+local navic = require('nvim-navic')
+require('lualine').setup {
+    winbar = {
+        lualine_a = {},
+        lualine_b = {},
+        lualine_c = {
+            {
+                function()
+                    return navic.get_location()
+                end,
+                cond = function()
+                    return navic.is_available()
+                end
+            }
+        },
+        lualine_x = {},
+        lualine_y = {},
+        lualine_z = {}
+    }
+}
+
+require('tabline').setup {
+    enable = true
+}
+
+require("zen-mode").setup {
 }
 
 -- vim.cmd [[

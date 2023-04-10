@@ -26,7 +26,7 @@ return require('packer').startup(function(use)
             ts_update()
         end,
     }
-    use 'nvim-treesitter/nvim-treesitter-context'
+    -- use 'nvim-treesitter/nvim-treesitter-context'
 
     -- lsp
     use 'neovim/nvim-lspconfig'
@@ -54,10 +54,18 @@ return require('packer').startup(function(use)
     use "tpope/vim-fugitive"
 
     -- latex
-    -- use 'lervag/vimtex'
+    use 'lervag/vimtex'
 
     -- ui
-    use 'b0o/incline.nvim'
+    use "SmiteshP/nvim-navic"
+    --use 'b0o/incline.nvim'
     use 'morhetz/gruvbox'
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
+    use 'kdheepak/tabline.nvim'
+    use 'folke/zen-mode.nvim'
+    use 'smithbm2316/centerpad.nvim'
 end)
 

@@ -1,44 +1,51 @@
 require("mason").setup()
 
 require("mason-lspconfig").setup {
-  ensure_installed = {
-    "lua_ls",
-    "pylsp",
-    "tsserver",
-    "texlab"
-  }
+    ensure_installed = {
+        "lua_ls",
+        "pylsp",
+        "tsserver",
+        "texlab"
+    }
 }
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
+local navic = require("nvim-navic")
 require("mason-lspconfig").setup_handlers {
-  -- The first entry (without a key) will be the default handler
-  -- and will be called for each installed server that doesn't have
-  -- a dedicated handler.
-  function (server_name) -- default handler (optional)
-    require("lspconfig")[server_name].setup {
-      capabilities = capabilities
-    }
-  end,
-
-  ["lua_ls"] = function ()
-    require("lspconfig")["lua_ls"].setup {
-      settings = {
-        Lua = {
-          diagnostics = {
-            globals = { "vim" }
-          },
-          workspace = {
-            -- Make the server aware of Neovim runtime files
-            library = vim.api.nvim_get_runtime_file("", true),
-          },
-          telemetry = {
-            -- Do not send telemetry data containing a randomized but unique identifier
-            enable = false,
-          },
+    -- The first entry (without a key) will be the default handler
+    -- and will be called for each installed server that doesn't have
+    -- a dedicated handler.
+    function (server_name) -- default handler (optional)
+        require("lspconfig")[server_name].setup {
+            capabilities = capabilities,
+            on_attach = function(client, bufnr)
+                navic.attach(client, bufnr);
+            end
         }
-      },
-      capabilities = capabilities
-    }
-  end,
+    end,
+
+    ["lua_ls"] = function ()
+        require("lspconfig")["lua_ls"].setup {
+            settings = {
+                Lua = {
+                    diagnostics = {
+                        globals = { "vim" }
+                    },
+                    workspace = {
+                        -- Make the server aware of Neovim runtime files
+                        library = vim.api.nvim_get_runtime_file("", true),
+                    },
+                    telemetry = {
+                        -- Do not send telemetry data containing a randomized but unique identifier
+                        enable = false,
+                    },
+                }
+            },
+            capabilities = capabilities,
+            on_attach = function(client, bufnr)
+                navic.attach(client, bufnr);
+            end
+        }
+    end,
 }
 

@@ -19,9 +19,11 @@ require('nvim-treesitter.configs').setup {
     },
 }
 
-require'treesitter-context'.setup{
-    enable = true
-}
+--require'treesitter-context'.setup{
+--    enable = true,
+--    max_lines = 1,
+--    trim_scope = 'outer'
+--}
 
 -- vim.cmd([[
 --     set foldmethod=expr
