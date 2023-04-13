@@ -59,6 +59,17 @@ return require('packer').startup(function(use)
 
     -- ui
     use "SmiteshP/nvim-navic"
+    use {
+        "SmiteshP/nvim-navbuddy",
+        requires = {
+            "neovim/nvim-lspconfig",
+            "SmiteshP/nvim-navic",
+            "MunifTanjim/nui.nvim",
+            "numToStr/Comment.nvim",        -- Optional
+            "nvim-telescope/telescope.nvim" -- Optional
+        }
+    }
+
     --use 'b0o/incline.nvim'
     use 'morhetz/gruvbox'
     use {

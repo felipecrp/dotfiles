@@ -19,6 +19,11 @@ vim.keymap.set('n', '<leader>sc', function() hop.hint_char1() end, {})
 vim.keymap.set('n', '<Tab>', ':bn<CR>', { noremap = true } )
 vim.keymap.set('n', '<S-Tab>', ':bn<CR>', { noremap = true } )
 
+-- Latex / Markdown preview
+local knap = require("knap")
+vim.keymap.set('n', '<space>pt', knap.toggle_autopreviewing, {})
+vim.keymap.set('n', '<space>ps', knap.forward_jump, {})
+
 -- lsp 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
