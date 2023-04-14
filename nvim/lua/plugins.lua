@@ -51,7 +51,10 @@ return require('packer').startup(function(use)
     use 'saadparwaiz1/cmp_luasnip'
 
     -- auto pair 
-    use 'windwp/nvim-autopairs'
+    use {
+        'windwp/nvim-autopairs',
+        config = function() require("nvim-autopairs").setup {} end
+    }
 
     -- git
     use "tpope/vim-fugitive"
@@ -73,7 +76,10 @@ return require('packer').startup(function(use)
         }
     }
 
-    --use 'b0o/incline.nvim'
+    use {
+        'b0o/incline.nvim',
+        config = function() require('incline').setup() end
+    }
     use 'morhetz/gruvbox'
     use {
         'nvim-lualine/lualine.nvim',

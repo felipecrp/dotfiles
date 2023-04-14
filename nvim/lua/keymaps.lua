@@ -23,6 +23,7 @@ vim.keymap.set('n', '<S-Tab>', ':bn<CR>', { noremap = true } )
 local knap = require("knap")
 vim.keymap.set('n', '<leader>pt', knap.toggle_autopreviewing, {})
 vim.keymap.set('n', '<leader>ps', knap.forward_jump, {})
+vim.keymap.set('n', '<leader>po', knap.process_once, {})
 
 -- Git
 vim.keymap.set('n', '<leader>gg', ':Git<CR>', {})
