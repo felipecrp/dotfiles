@@ -30,33 +30,33 @@
 )
 
 (defalias
-    rld (tap-hold-release 200 200 (layer-switch default) rsft)
-    rln (tap-hold-release 200 200 (layer-switch navigation) rsft)
-    rls (tap-hold-release 200 200 (layer-switch symbols) rsft)
+    gld (tap-hold-release 200 200 (layer-switch default) rctl)
+    gln (tap-hold-release 200 200 (layer-switch navigation) rctl)
+    gls (tap-hold-release 200 200 (layer-switch symbols) rctl)
 )
 
 (deflayer default
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc home
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \    pgup
   @csc @lma @las @lcd @lsf g    h    @rsj @rck @ral @rm; '    ret       pgdn
-  lsft z    x    c    v    b    n    m    ,    .    /    @rls      up   end
-  lctl lmet lalt           spc            _    rmet rctl      left down rght
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft      up   end
+  lctl lmet lalt           spc            ralt rmet @gls      left down rght
 )
 
 (deflayer navigation
   _    f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  _    _
   _    1    2    3    4    5    6    7    8    9    0    _    _    _    _
   @btd _    _    _    _    _    left down up   rght bspc del  _         _
-  _    _    _    _    _    _    home pgdn pgup end  _    @rld      _    _
-  _    _    _              _              _    _    _         _    _    _
+  _    _    _    _    _    _    home pgdn pgup end  _    _         _    _
+  _    _    _              _              _    _    @gld      _    _    _
 )
 
 (deflayer symbols
   _    _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _    _    _    _    _    7    8    9    _    _    _    _    _
   @btd _    _    _    _    _    _    4    5    6    ,    _    _         _
-  _    _    _    _    _    _    0    1    2    3    .    @rln      _    _
-  _    _    _              _              _    _    _         _    _    _
+  _    _    _    _    _    _    0    1    2    3    .    _         _    _
+  _    _    _              _              _    _    @gln      _    _    _
 )
 
 (deflayer empty
