@@ -1,6 +1,7 @@
 
 (defcfg
   delegate-to-first-layer yes
+  windows-altgr cancel-lctl-press
 )
 
 (defsrc
@@ -33,6 +34,11 @@
     gld (tap-hold-release 200 200 (layer-switch default) rctl)
     gln (tap-hold-release 200 200 (layer-switch navigation) rctl)
     gls (tap-hold-release 200 200 (layer-switch symbols) rctl)
+)
+
+(defalias
+  bsl (tap-hold-release 200 200 bspc lalt)
+  rtl (tap-hold-release 200 200 ret ralt)
 )
 
 (deflayer default
