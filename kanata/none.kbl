@@ -1,8 +1,8 @@
 
 (defsrc
-  caps 
+  rctl 
 )
 
 (deflayer default
-  lrld-next
+  (tap-hold 200 200 lrld-next rctl)
 )
