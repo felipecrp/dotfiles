@@ -12,57 +12,72 @@
   lctl lmet lalt           spc            ralt rmet rctl      left down rght
 )
 
-(defalias
-    lma (tap-hold 200 200 a lmet)
-    las (tap-hold 200 200 s lalt)
-    lcd (tap-hold 200 200 d lctl)
-    lsf (tap-hold 200 200 f lsft)
-
-    rsj (tap-hold 200 200 j rsft)
-    rck (tap-hold 200 200 k rctl)
-    ral (tap-hold 200 200 l lalt)
-    rm; (tap-hold 200 200 ; rmet)
-)
-
-(defalias
-    tgl (layer-while-held navigation) 
-    csc (tap-hold-release 200 200 esc @tgl)    
-    btd (tap-hold-release 200 200 (layer-switch default) @tgl)    
-)
+;; (defalias
+;;     tgl (layer-while-held navigation) 
+;;     csc (tap-hold-release 200 200 
+;;       (tap-dance 200 (
+;;         esc
+;;         lrld-next
+;;       ))
+;;       @tgl)    
+;;     btd (tap-hold-release 200 200 (layer-switch default) @tgl)    
+;; )
 
 (defalias
-    gld (tap-hold-release 200 200 (layer-switch default) rctl)
-    gln (tap-hold-release 200 200 (layer-switch navigation) rctl)
-    gls (tap-hold-release 200 200 (layer-switch symbols) rctl)
-)
+  ;; toogle layers
+  tde (layer-while-held default)
+  tna (layer-while-held navigation)
+  tsy (layer-while-held symbols)
+  
+  ;; switch layers
+  sde (layer-switch default)
+  sna (layer-switch navigation)
+  ssy (layer-switch symbols)
 
-(defalias
-  bsl (tap-hold-release 200 200 bspc lalt)
-  rtl (tap-hold-release 200 200 ret ralt)
+  ;; layer navigation
+  dsp (tap-hold 200 200 spc @tna)
+
+  ;; aux
+  mca (fork (fork 
+    (multi esc @sde) 
+    @ssy (rsft))
+    @sna (lsft)
+  )
+   
+  ;; mod keys
+  ma (tap-hold 200 200 a lmet)
+  ms (tap-hold 200 200 s lalt)
+  md (tap-hold 200 200 d lctl)
+  mf (tap-hold 200 200 f lsft)
+
+  mj (tap-hold 200 200 j rsft)
+  mk (tap-hold 200 200 k rctl)
+  ml (tap-hold 200 200 l lalt)
+  m; (tap-hold 200 200 ; rmet)
 )
 
 (deflayer default
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc home
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \    pgup
-  @csc @lma @las @lcd @lsf g    h    @rsj @rck @ral @rm; '    ret       pgdn
-  lsft z    x    c    v    b    n    m    ,    .    /    rsft      up   end
-  lctl lmet lalt           spc            ralt rmet @gls      left down rght
+  @mca @ma  @ms  @md  @mf  g    h    @mj  @mk  @ml  @m;  '    ret       pgdn
+  lsft z    x    c    v    b   n    m    ,    .    /    rsft      up   end
+  lctl lmet lalt           @dsp          ralt rmet rctl      left down rght
 )
 
 (deflayer navigation
-  _    f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  _    _
-  _    1    2    3    4    5    6    7    8    9    0    _    _    _    _
-  @btd _    _    _    _    _    left down up   rght bspc del  _         _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    caps tab  bspc del  ret  _    _    _    _
+  @sde _    _    _    _    _    left down up   rght _    _    _         _
   _    _    _    _    _    _    home pgdn pgup end  _    _         _    _
-  _    _    _              _              _    _    @gld      _    _    _
+  _    _    _              @sde           _    _    _         _    _    _
 )
 
 (deflayer symbols
   _    _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _    _    _    _    _    7    8    9    _    _    _    _    _
-  @btd _    _    _    _    _    _    4    5    6    ,    _    _         _
+  @sde _    _    _    _    _    _    4    5    6    ,    _    _         _
   _    _    _    _    _    _    0    1    2    3    .    _         _    _
-  _    _    _              _              _    _    @gln      _    _    _
+  _    _    _              @sde           _    _    _         _    _    _
 )
 
 (deflayer empty
