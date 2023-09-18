@@ -55,17 +55,18 @@
   ml (tap-hold 200 200 l lalt)
   m; (tap-hold 200 200 ; rmet)
 
+  os (tap-hold 200 200 S-, lalt)
+  ob (tap-hold 200 200 [   lctl)
+  oc (tap-hold 200 200 S-[ lsft)
   op S-9
   cp S-0
-  oc S-[
   cc S-]
-  ob [
   cb ]
-  os S-,
   cs S-.
-  mb ;
   |  S-\
   ^ (macro S-6 spc)
+  $ S-4
+  % S-5
 )
 
 (deflayer default
@@ -78,8 +79,8 @@
 
 (deflayer navigation
   _    _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    @^   @os  @ob  @oc  @op  caps tab  bspc del  ret  _    _    _    _
-  @sde _    _    _    _    =    left down up   rght _    _    _         _
+  _    @^   @%   =    @$   _    caps tab  bspc del  ret  _    _    _    _
+  @sde _    @os  @ob  @oc  @op  left down up   rght _    _    _         _
   _    @|   @cs  @cb  @cc  @cp  home pgdn pgup end  _    _         _    _
   _    _    _              @sde           _    _    _         _    _    _
 )
