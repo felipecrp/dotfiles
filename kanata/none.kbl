@@ -1,0 +1,8 @@
+
+(defsrc
+  rctl 
+)
+
+(deflayer default
+  (tap-hold 200 200 lrld-next rctl)
+)
