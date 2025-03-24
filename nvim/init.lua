@@ -1,9 +1,5 @@
 
-require("plugins")
-require("options")
-require("lsp")
-require("completion")
-require("code")
-require("keymaps")
-require("ui")
+
+require("config.opt")
+require("config.lazy")
 
